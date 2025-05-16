@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSSEMbitz | Watch Full Movies Online Free</title>
+<meta name="description" content="KSSEMbitz| Latest Bollywood, Hollywood, Telugu, Tamil, Malayalam Movies Watch Online Free">
+<style>
+:root {
+  --primary: #e50914;
+  --secondary: #b81d24;
+  --dark: #141414;
+  --darker: #0a0a0a;
+  --light: #f5f5f1;
+  --accent: #46d369;
+  --gray: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--darker);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+.contain {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+#branding {
+  background: linear-gradient(135deg, var(--dark), var(--darker));
+  padding: 20px 0;
+  border-bottom: 3px solid var(--primary);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#site-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#site-title a {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#site-description {
+  font-size: 1.2rem;
+  color: var(--gray);
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Search Bar */
+#search {
+  background-color: var(--dark);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.searchform {
+  display: flex;
+  justify-content: center;
+}
+
+.searchform input[type="text"] {
+  padding: 12px 20px;
+  width: 60%;
+  max-width: 600px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 1rem;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--light);
+  outline: none;
+}
+
+.searchform input[type="submit"] {
+  padding: 12px 25px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.searchform input[type="submit"]:hover {
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+}
+
+/* Navigation */
+#menu {
+  background-color: var(--dark);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#primary-menu {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#primary-menu > li {
+  position: relative;
+}
+
+#primary-menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+#primary-menu > li:hover > a {
+  color: var(--primary);
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--dark);
+  min-width: 220px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  border-radius: 0 0 8px 8px;
+  padding: 10px 0;
+}
+
+#primary-menu > li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.sub-menu li a:hover {
+  color: var(--primary);
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1400x400') center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, var(--darker));
+}
+
+.banner-content {
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.banner h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Movie Sections */
+.featured {
+  margin-bottom: 40px;
+}
+
+.line_table {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  color: var(--light);
+  position: relative;
+}
+
+.line_table::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.films ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+.boxed.film {
+  background-color: var(--dark);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.boxed.film:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.cont_display {
+  position: relative;
+  overflow: hidden;
+}
+
+.cont_display img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.boxed.film:hover .cont_display img {
+  transform: scale(1.05);
+}
+
+.boxed.film p {
+  padding: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--light);
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+/* Sidebar */
+#sidebar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.widget {
+  background-color: var(--dark);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.widget-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  color: var(--light);
+}
+
+.widget ul {
+  list-style: none;
+}
+
+.widget li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.widget li:last-child {
+  border-bottom: none;
+}
+
+.widget li a {
+  display: block;
+  color: var(--gray);
+  transition: all 0.3s ease;
+}
+
+.widget li a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+/* Footer */
+#colophon {
+  background-color: var(--dark);
+  padding: 40px 0;
+  margin-top: 50px;
+  border-top: 3px solid var(--primary);
+}
+
+#site-generator {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+#site-generator p {
+  margin-bottom: 15px;
+}
+
+#site-generator a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #primary-menu {
+    flex-direction: column;
+  }
+  
+  .sub-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+  
+  #primary-menu > li:hover .sub-menu {
+    display: block;
+  }
+  
+  .films ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .banner {
+    height: 300px;
+  }
+  
+  .banner h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.featured, .widget {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Quality Tags */
+.quality-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--primary);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Bookmark Banner */
+.bookmark-banner {
+  background: linear-gradient(90deg, #ff7b09, #ff4d00);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 123, 9, 0.3);
+}
+
+.bookmark-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Hover Effects */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.03);
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+  box-shadow: 0 5px 15px rgba(232, 17, 35, 0.4);
+}
+</style>
+</head>
+
+<body class="home page-template page-template-page-homepage page-template-page-homepage-php page">
+<div id="page-wrap" class="contain">
+
+<!-- Header -->
+<header id="branding" role="banner">
+  <h1 id="site-title"><a href="https://www.5movierulz.srl">KSSEMbitz</a></h1>
+  <h2 id="site-description">Watch Full Movies Online Free</h2>
+</header>
+
+<!-- Search -->
+<div id="search">
+  <form role="search" method="get" id="searchform" class="searchform" action="https://www.5movierulz.srl/search_movies">
+    <div>
+      <input type="text" name="s" id="search_term" placeholder="Search for movies..." autocomplete="off" required>
+      <input type="submit" id="searchsubmit" value="Search">
+    </div>
+  </form>          
+</div>
+
+<!-- Navigation -->
+<nav id="menu" role="navigation">
+  <ul id="primary-menu" class="menu">
+    <li><a title="Home" href="https://www.5movierulz.srl">Home</a></li>
+
+    <li><a title="Featured Movies" href="https://www.5movierulz.srl/movies?sort=featured">Featured</a>
+      <ul class="sub-menu">
+        <li><a title="Hollywood Featured" href="https://www.5movierulz.srl/category/hollywood-featured">Hollywood</a></li>
+        <li><a title="Bollywood Featured" href="https://www.5movierulz.srl/category/bollywood-featured">Bollywood</a></li>
+        <li><a title="Telugu Featured" href="https://www.5movierulz.srl/category/telugu-featured">Telugu</a></li>
+        <li><a title="Tamil Featured" href="https://www.5movierulz.srl/category/tamil-featured">Tamil</a></li>
+        <li><a title="Malayalam Featured" href="https://www.5movierulz.srl/category/malayalam-featured">Malayalam</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Bollywood Movies" href="https://www.5movierulz.srl/category/bollywood-featured">Bollywood</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/category/bollywood-movies-2025">2025 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/bollywood-movies-2024">2024 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/bollywood-movies-2023">2023 Movies</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Telugu Movies" href="https://www.5movierulz.srl/category/telugu-featured/">Telugu</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/category/telugu-movies-2025">2025 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/telugu-movies-2024">2024 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/telugu-movies-2023">2023 Movies</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Tamil Movies" href="https://www.5movierulz.srl/category/tamil-featured">Tamil</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/category/tamil-movies-2025">2025 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/tamil-movies-2024">2024 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/tamil-movies-2023">2023 Movies</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Malayalam Movies" href="https://www.5movierulz.srl/category/malayalam-featured">Malayalam</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/category/malayalam-movies-2025">2025 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/malayalam-movies-2024">2024 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/malayalam-movies-2023">2023 Movies</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Hollywood Movies" href="https://www.5movierulz.srl/category/hollywood-featured">Hollywood</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/category/hollywood-movies-2025">2025 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/hollywood-movies-2024">2024 Movies</a></li>
+        <li><a href="https://www.5movierulz.srl/category/hollywood-movies-2023">2023 Movies</a></li>
+      </ul>
+    </li>
+
+    <li><a title="Dubbed Movies" href="https://www.5movierulz.srl/#">Dubbed</a>
+      <ul class="sub-menu">
+        <li><a href="https://www.5movierulz.srl/language/hindi-dubbed">Hindi Dubbed</a></li> 
+        <li><a href="https://www.5movierulz.srl/language/tamil-dubbed">Tamil Dubbed</a></li> 
+        <li><a href="https://www.5movierulz.srl/language/telugu-dubbed">Telugu Dubbed</a></li> 
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- Bookmark Banner -->
+<div class="bookmark-banner hover-grow">
+  "Bookmark Us or Use Full <a href="/" rel="nofollow noopener">5Movierulz.skin</a> URL | <a href="https://www.5movierulz.srl/download-movierulz-app">Download App</a>"
+</div>
+
+<!-- Main Content -->
+<div id="content" class="clearfix row-fluid">
+  <div id="main" class="span12 clearfix" role="main">
+    
+    <!-- Featured Movies Section -->
+    <div id="list" class="films">
+      <div class="featured">
+        <h2 class="line_table">Featured Movies</h2>
+        <div class="content home_style">
+          <ul>
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Single (2025) DVDScr Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/single-2025-telugu/movie-watch-online-free-4811.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Single-Telugu.jpg" alt="Single">
+                    <span class="quality-tag">DVDScr</span>
+                  </a>
+                </div>
+                <p><b>Single (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Subham (2025) DVDScr Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/subham-2025-telugu/movie-watch-online-free-4827.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Subham-Telugu.jpg" alt="Subham">
+                    <span class="quality-tag">DVDScr</span>
+                  </a>
+                </div>
+                <p><b>Subham (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Gangers (2025) HDRip Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/gangers-2025-telugu/movie-watch-online-free-4833.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Gangers-Telugu-1.jpg" alt="Gangers">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Gangers (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Anaganaga (2025) HDRip Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/anaganaga-2025-telugu/movie-watch-online-free-4834.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Anaganaga-Telugu-1.jpg" alt="Anaganaga">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Anaganaga (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Jolly O Gymkhana (2025) HDRip Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/jolly-o-gymkhana-2025-telugu/movie-watch-online-free-4832.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Jolly-O-Gymkhana-Telugu.jpg" alt="Jolly O Gymkhana">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Jolly O Gymkhana (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Maranamass (2025) HDRip Telugu Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/maranamass-2025-telugu/movie-watch-online-free-4824.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Maranamass-Telugu.jpg" alt="Maranamass">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Maranamass (2025)</b></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Latest Movies Section -->
+      <div class="featured lastest">
+        <h2 class="line_table">Latest Movies</h2>
+        <div class="content home_style">
+          <ul>
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Ka.Mu Ka.Pi (2025) HDRip Tamil Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/kamu-kapi-2025-tamil/movie-watch-online-free-4844.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Ka.Mu-Ka.Pi-Tamil.jpg" alt="Ka.Mu Ka.Pi">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Ka.Mu Ka.Pi (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="The Door (2025) HDRip Tamil Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/the-door-2025-tamil/movie-watch-online-free-4843.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/The-Door-Tamil.jpg" alt="The Door">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>The Door (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Nesippaya (2025) HDRip Tamil Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/nesippaya-2025-tamil/movie-watch-online-free-4842.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Nesippaya-Tamil.jpg" alt="Nesippaya">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Nesippaya (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Parannu Parannu Parannu Chellan (2025) HDRip Malayalam Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/parannu-parannu-parannu-chellan-2025-malayalam/movie-watch-online-free-4841.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Parannu-Parannu-Parannu-Chellan-Malayalam.jpg" alt="Parannu Parannu Parannu Chellan">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Parannu Parannu Parannu Chellan (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Iyer in Arabia (2025) HDRip Malayalam Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/iyer-in-arabia-2025-malayalam/movie-watch-online-free-4840.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Iyer-in-Arabia-Malayalam.jpg" alt="Iyer in Arabia">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Iyer in Arabia (2025)</b></p>
+              </div>
+            </li>
+            
+            <li>
+              <div class="boxed film hover-grow">
+                <div class="cont_display">
+                  <a title="Kalakk (2024) HDRip Malayalam Movie Watch Online Free MovieRulz" href="https://www.5movierulz.srl/kalakk-2024-malayalam/movie-watch-online-free-4839.html">
+                    <img width="165" height="220" src="https://www.5movierulz.srl/uploads/Kalakk-Malayalam.jpg" alt="Kalakk">
+                    <span class="quality-tag">HDRip</span>
+                  </a>
+                </div>
+                <p><b>Kalakk (2024)</b></p>
+              </div>
+            </li>
+          </ul>
+          
+          <nav id="posts-nav" class="paged-navigation contain">
+            <div class="nav-newer"><a href="https://www.5movierulz.srl/movies/page/1" class="btn-gradient">View More Movies →</a></div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sidebar -->
+  <div id="sidebar" role="complementary">
+    <div class="widget">
+      <h2 class="widget-title">Recent Updates</h2>
+      <ul>
+        <li><a href="https://www.5movierulz.srl/kamu-kapi-2025-tamil/movie-watch-online-free-4844.html">Ka.Mu Ka.Pi (2025) HDRip Tamil</a></li>
+        <li><a href="https://www.5movierulz.srl/the-door-2025-tamil/movie-watch-online-free-4843.html">The Door (2025) HDRip Tamil</a></li>
+        <li><a href="https://www.5movierulz.srl/parannu-parannu-parannu-chellan-2025-malayalam/movie-watch-online-free-4841.html">Parannu Parannu Parannu Chellan (2025)</a></li>
+        <li><a href="https://www.5movierulz.srl/nesippaya-2025-tamil/movie-watch-online-free-4842.html">Nesippaya (2025) HDRip Tamil</a></li>
+        <li><a href="https://www.5movierulz.srl/iyer-in-arabia-2025-malayalam/movie-watch-online-free-4840.html">Iyer in Arabia (2025) HDRip</a></li>
+        <li><a href="https://www.5movierulz.srl/kalakk-2024-malayalam/movie-watch-online-free-4839.html">Kalakk (2024) HDRip Malayalam</a></li>
+      </ul>
+    </div>
+    
+    <div class="widget">
+      <h2 class="widget-title">Popular Categories</h2>
+      <ul>
+        <li><a href="https://www.5movierulz.srl/category/hollywood-featured">Hollywood Featured</a></li>
+        <li><a href="https://www.5movierulz.srl/category/bollywood-featured">Bollywood Featured</a></li>
+        <li><a href="https://www.5movierulz.srl/category/telugu-featured">Telugu Featured</a></li>
+        <li><a href="https://www.5movierulz.srl/category/tamil-featured">Tamil Featured</a></li>
+        <li><a href="https://www.5movierulz.srl/category/malayalam-featured">Malayalam Featured</a></li>
+        <li><a href="https://www.5movierulz.srl/language/hindi-dubbed">Hindi Dubbed Movies</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="colophon" role="contentinfo">
+  <div id="site-generator">
+    <p>Powered by <a href="https://www.5movierulz.srl/"><strong>KSSEMbitz</strong></a></p>
+    <p>All of the free movies found on this website are hosted on third-party servers that are freely available to watch online for all internet users.</p>
+    <p>Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.</p>
+  </div>
+</footer>
+
+</div><!-- end page-wrap -->
+</body>
+</html>
